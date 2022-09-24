@@ -1,0 +1,248 @@
+  
+  *{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  *{
+    box-sizing: border-box;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .transition{
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s
+  }
+  
+  html,body{
+    height: 100%;
+    background-color: #204056;
+  }
+  
+  h1,h2,h3,h4,h5,h6,ul,li,p,body{
+    padding:0;
+    margin:0;
+  }
+  
+  a,input,button,textarea{
+    outline:none;
+    text-decoration:none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  svg{
+    opacity: 1.0;
+    width:22px;
+    height:22px
+  }
+    
+  #start-wrapper{
+    background: #204056;
+    width:100%;
+    height:100%;
+    position: fixed ;
+    top:0;
+    left:0;
+    margin:0;
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #start-wrapper button{
+    border: 1px ridge #00dd00;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    color:#006400;
+    font-size: 36px;
+    font-family: stormface;
+    box-shadow: 0 0 50px #00ff00;
+  }
+  
+  #portrait-mode-container{
+    background: #204056;
+    width:100%;
+    height:100%;
+    position: fixed ;
+    top:0;
+    left:0;
+    margin:auto;
+    padding:8px;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #portrait-mode-container fieldset{
+    background: #ddd;
+    height: 100%;
+    border:6px groove #00ee00;
+    text-align: center;
+    padding:80px 10px;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #portrait-mode-container fieldset legend{
+    color:#f0ee00;
+    text-shadow: -1px 2px 2px #444;
+    background: #204056;
+    padding:8px;
+    font-size: 32px;
+    width:auto;
+    margin: 0 auto;
+    font-family: prototype;
+    letter-spacing: 1.2px;
+  }
+  
+  #rotate-icon-wrapper{
+    color:#670000;
+    padding: 30px 0;
+    
+  }
+  
+  #rotate-icon{
+    padding: 50px 0;
+  }
+  
+  #rotate-icon svg{
+    width:200px;
+    height:200px;
+    fill:#670000
+  }
+  
+    
+  #home{
+    width:100%;
+    position: fixed;
+    top:0;
+    left: 0;
+  }
+  
+  #drawing-home{
+    width:100%;
+    height:100%;
+    padding: 8px;
+  }
+  
+  #page-env{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: #f1f1f1;
+    box-shadow: 0 0 20px inset #204056;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #page-wrapper{
+    position: absolute;
+    padding: 1px;
+    margin: 8px;
+    border:0.3px solid #204056;
+    box-shadow: 0 4px 8px #204056
+  }
+  
+  .page{
+    width: 200px;
+    height: 200px;
+    background: #aac3d4;
+  }
+  
+  #menu{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: fixed;
+    bottom:20px;
+    background: #204056;
+    border: 1px solid #f4f4f4;
+    box-shadow: 0 0 10px #204056;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+  
+  #menu svg{
+    width:80%;
+    height: 80%;
+    fill:#00ee00
+  }
+  
+  .open-menu{
+    z-index: 50000 !important;
+    }
+  .open-menu svg{
+    fill:#f00 !important
+  }
+  
+  #menu-contents-wrapper{
+    width: 100%;
+    position: fixed;
+    display: none;
+    bottom:0;
+    background: #204056
+    
+  }
+  
+  
+  @font-face{
+    font-family:'minstrels';
+    src : url('./fonts/minstrels.ttf')
+  }
+  
+  @font-face{
+    font-family:'Closeness-Bold';
+    src : url('./fonts/Closeness-Bold.ttf')
+  }
+  
+  @font-face{
+    font-family:'pdark';
+    src : url('./fonts/pdark.ttf')
+  }
+  
+  @font-face{
+    font-family:'prototype';
+    src : url('./fonts/prototype.ttf')
+  }
+  
+  @font-face{
+    font-family:'blackjack';
+    src : url('./fonts/blackjack.otf')
+  }
+  @font-face{
+    font-family:'stormface';
+    src : url('./fonts/stormfaze.ttf')
+  }
+  
+  @font-face{
+    font-family:'crashed_scoreboard';
+    src : url('./fonts/crashed_scoreboard.ttf')
+  }
+  
+  @font-face{
+    font-family:'ming';
+    src : url('./fonts/MING____.ttf')
+  }
+  
+  @font-face{
+    font-family:'amita-regular';
+    src : url('./fonts/amita-regular.ttf')
+  }
+  
+  @font-face{
+    font-family:'BebasNeue-webfont';
+    src : url('./fonts/BebasNeue-webfont.woff')
+  }
+  
