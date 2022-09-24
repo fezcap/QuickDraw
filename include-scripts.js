@@ -1,5 +1,5 @@
   (function (){
-    let lib = include('imirror crypto-js jscolor', 'lib/'),
+    let lib = include('crypto-js mirror jscolor', 'lib/'),
     main = include('quick-draw-items main-view storage html');
     css = include('style font', 'css/');
     
