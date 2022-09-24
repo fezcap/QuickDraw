@@ -1,5 +1,5 @@
   (function (){
-alert(77777)
+alert($$)
     let _ = $$.guid(true).times(100),
     cls = 'iconic-menu-list',
     menuSvg = '<svg viewBox="0 0 24 24"><path d="M3 6h18v2.016H3V6zm0 6.984v-1.969h18v1.969H3zM3 18v-2.016h18V18H3z"/></svg>',
