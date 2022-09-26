@@ -1,0 +1,243 @@
+  
+  $$.len(str) : return string length
+  $$.len({}) : return object length
+  $$.len([]) : return array length
+  $$.len(888) : return number length
+  
+  $$.typo(val) : return typeof
+  
+  $$.isArr(a) : return true if it is array
+  
+  $$.toStr(val,radix) : return val to string
+    using native toString()
+   
+  $$.pF() : return parseFloat()
+  
+  $$.str : return string prototype
+  $$ arr : return array prototype
+  
+  $$.extend.str(obj) : extend string prototype
+  $$.extend.arr(obj) : extend array prototype
+  
+  $$.randChar()//default chars
+  $$.randChar('=]<')// user define chars
+  
+  $$.encrypt(str,passcode,radix)
+    if radix has define it point to that radix not random again and encrypted string remains at fix place
+  $$.decrypt(str) // to decrypt with no pascode
+  $$.decrypt(str,passcode) // to decrypt with  pascode
+  $$.decrypt(str,true,'***') // format to recover forgotten passcode if any
+  
+  
+  $$.tag({}) //print html element. available prop
+   > elem // any html elem
+  attr// obj // all attr
+text: content
+  
+  How to use $$.each()
+    1. to loop through objects
+       e.g.
+       $$.each({a:'a'},function(k,v,i,o){
+         k = key;
+         v = value;
+         i = counter (iteration)
+         o = given object
+       })
+      
+    2. to loop through array
+       e.g.
+       $$.each(['a','b ],function(k,i,arr){
+         k = each item;
+         i = counter (iteration);
+         arr = given array 
+       })
+      
+    3. convert string to array
+       e.g.
+       $$.each('a;b;c',';',function(k,i,arr){
+         k = each item;
+         i = counter (iteration);
+         arr = converted string to array
+          this = object 
+       })
+      
+      
+    4. iteration: loop from 0 to 10
+       e.g.
+       $$.each('0-10',function(i,diff, n1, n2){
+         i = iteration;
+         diff = difference,
+         n1 = fisrt integer
+         n2 = second integer
+       })
+      
+    5. iteration: loop from 10 down to 0
+       e.g.
+       $$.each('10-0',function(i,diff,n1, n2){
+         i = iteration;
+         diff = difference
+       })
+      
+      ////new methods
+        $$.injectJs(script, id, head|body)
+        $$.injectCss(style, id)
+
+        $$.escapeHTML('<a href="#">link</a>')
+
+        $d.toRomanNumral(n)
+
+       $$.queryString(url) return object
+       $$.dig(obj, target) search deeply into object
+       $$.smoothScroll(elem)
+       $$.getImages(el, duplicate)
+     
+        $$.frequencies(arr)
+        
+
+       $$.device.resize(callback, capture)
+     $$.colorCode(n,hash) return strin or array
+     
+       $$.localStore(storageName, storageType=session||local)
+      
+      $$.DB({
+      databaseName:
+      storeName:
+      storeKey: 
+      databaseVersion : number
+      })
+      
+      $$.database() alias DB
+      
+      $$.device.inLandscape()
+      $$.device.lockLandscape(callback)
+      $$.device.lockPortrait(callback)
+      $$.device.setFullscreen(callback)
+      $$.device.rotation(callback)
+      
+       $$.keys({})
+       return s object keys in array
+       $$.values({})
+       return s object value in array
+        $$.tab(target elem, event || pos, true|false|function, true|false)
+         fisrt parameter = target elem to select. selector is class name
+         second parameter = event or index position of the target element
+         third parameter = callback(selected elem, pos) or boleanv> true for self trigger
+         fourth parameter =  boleanv > true for self trigger
+         return object.
+      ////new methods end
+      
+      
+      
+    6. to print integer from 0-9
+       $$.int()
+      
+    7. to print alphabet Aa-Zz
+       > $$.alpha()  // a-z
+       > $$.alpha(true)  // A-Z
+       > $$.alpha(1,6) // a-f
+       > $$.alpha(true,1,6) // A-F
+       > $$.alpha(true,6) // F-Z
+       > $$.alpha(6) // f-z
+      
+    8. to generate guid
+       > $$.guid() // normal with default length of 32
+       > $$.guid(4) // length of 4
+       > $$.guid(true) // random length
+       > $$.guid('rand') // random length
+       > $$.guid(4,true) // length of 4 follow with integer
+       > $$.guid(4,true).times(7) // length of 4 follow with integer and create 7 times of guid
+      
+    9. to check the emptiness of input
+       $$.isEmpty('') //true - string is empty
+       $$.isEmpty([]) //true - array is empty
+       $$.isEmpty({}) //true - object is empty
+      
+    10. convert RGB to HEX
+      $$.rgbToHex(r,g,b) //******
+      $$.rgbToHex(r,g,b,true) //#******
+      $$.rgbToHex(r,g,b, function(hex,r,g,b){
+      
+      return : whatever
+      )
+      
+    11. to join char with specific symbol
+       $$.join('+',4,5) // 4+5
+       $$.join(';',4,5) // 4;5
+    
+    12. convert HEX to RGB
+        $$.hexToRGB('ff0000') //rgb(255,0,0)
+        $$.hexToRGB('ff0000',true) //array; 255,0,0
+    
+    13 $$.charAtIsUpper(char,pos) // return boolean; check if char at a specific position is upper case
+
+    14 $$.randNum(s,e)
+    
+    $$.now()
+    $$.date()
+    $$.monthNames(t) t = abbr
+    $$.dayNames(t) t = abbr
+    $$.day(t) // return current day name. options: full,abbr,num
+    $$.month(t) // return current month name. options: full,abbr,num
+    $$.sec()
+    $$.min()
+    $$.hour()
+    $$.getDayName(d,m,y,abbr)
+    $$.maxDay(m,y)//
+    
+    $$.device.type(callback(t,ua))
+    $$.device.width
+    $$.device.height
+    
+     $$.dayPassed()
+     $$.dayLeft()
+     $$.maxDay()
+    
+    
+   STORAGE
+  $$.storage.storageName.methods
+    storageName : 
+      1. LS == localStorage
+      2. SS == sessionStorage
+    
+    methods :
+      1.setItem(Key,val,boolean, password)
+         if boolean == true; the given key and val will encrypt
+         if password set; the given key and val will encrypt with the given password
+       
+      2. getItem(key,password)
+         if the given key was encrypt with password; you need to provide the password
+      
+      3. deleteItem(key,password)
+      
+      4. changePassword(key,old-password,new-password)
+       
+      5. getPassword(key,'***')
+      
+      6. addItem(k,val,password)
+      
+      
+      
+        STRING METHOD
+    1 lower() return toLowerCase()
+    2 upper() return toUpperCase()
+    3 delChar(n,ind)  // delete character(s)
+    4 extractChar(n,ind) // pick up character from string
+      use ".trash(" to get the remaining char
+    5 charAtIsUpper(pos) // return boolean; check if char at a specific position is upper case
+    6 findChar(str,true|null,true) // first param is the string to find. second param if 'true' return total found. third param if 'true' and 2nd para 'true' return total found but case sensitive. if 2nd param 'null' and 3rd param 'true' return boolean. if 2nd and 3rd param not pass in return boolean but not case sensitive
+    
+    cutCharAt(pos,index)// cut char at a specific position
+
+    splitCharBy(n,callback(item,trash,other,s)) // split char by : it split char by every giving number e.g ''.splitCharBy(3) it split by 3. it count 3 char split and so on it the remainder is not equal 3 it becomes trash. then use trash method to get it
+
+    mask(n,m,i)// hide char with specific symbol
+        > n = number of char to hide
+        >m = mask symbol  default is *
+        > i = position. Available value are 1. '^' for left. 2. '*'  for middle. 3. '$' for right default is *
+      title()
+      
+        fromChars(radix)// '30'.charFrom(24) //H
+        toChars(radix)//  //
+        
+        ARRAY method
+        charFrom(radix)// [30].charFrom(24) //H
